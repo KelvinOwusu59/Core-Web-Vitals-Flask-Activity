@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Task 3 Activity</title>
+</head>
+<body>
+
+<h1>Which metric/s has a bad performance on this page?</h1>
+
+<p>This is a text box with text in it, showing some text in English.</p>
+
+<div id="image-container"></div>
+
+<script>
+
+setTimeout(() => {
+
+    const img = document.createElement("img");
+    img.src = "https://picsum.photos/1500/800";
+
+    document.getElementById("image-container")
+        .appendChild(img);
+
+}, 1000);
+
+</script>
+
+<p>More content below (in English, similar to the English text box with text above).</p>
+<img src="https://picsum.photos/1600/900" width="100%">
+</body>
+</html>
