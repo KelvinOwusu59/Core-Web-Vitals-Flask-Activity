@@ -1,29 +1,27 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-<title>Task 2 Activity</title>
-</head>
-<body>
+    <head>
+        <title>Task 2 Activity</title>
+    </head>
+    <body>
+        <h1>Which metric/s has a bad performance on this page?</h1>
+        <p>Hint: click the button while Lighthouse is running.</p>
+        <button onclick="slowFunction()">Click Me</button>
 
-<h1>Which metric/s has a bad performance on this page?</h1>
-<p>Hint: click the button while Lighthouse is running.</p>
-<button onclick="slowFunction()">Click Me</button>
+        <p id="output"></p>
 
-<p id="output"></p>
+        <p>
+            After you identify the metric, please fix it and run Lighthouse again
+            (take screenshots of the report before and after the fix).
+        </p>
 
-<p>After you identify the metric, please fix it and run Lighthouse again (take screenshots of the report before and after the fix).</p>
-
-
-<script>
-
-function slowFunction(){
-    document.getElementById("output").innerText = "Processing...";
-    setTimeout(function() {
-        document.getElementById("output").innerText = "Button finished processing";
-    }, 2000);
-}
-
-</script>
-
-</body>
+        <script>
+            function slowFunction() {
+                setTimeout(() => {
+                    document.getElementById("output").innerText =
+                        "Button finished processing";
+                }, 2000);
+            }
+        </script>
+    </body>
 </html>
